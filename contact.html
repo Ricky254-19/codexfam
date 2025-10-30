@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Codex Fam — Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">Codex <span class="fam">Fam</span></a>
+      <button id="navToggle" class="hamburger" aria-label="Toggle navigation">☰</button>
+    </div>
+
+    <nav id="mainNav" class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link is-active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Join Codex Fam</h2>
+      <p>Drop your Discord or social links here — we’ll update these soon.</p>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Links will be added later.');">
+        <label>
+          Your name
+          <input type="text" placeholder="e.g. Wanjiru" />
+        </label>
+        <label>
+          Message
+          <textarea placeholder="Tell us why you wanna join..." rows="4"></textarea>
+        </label>
+        <div class="row">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <p class="muted">Social links will be added once you share them.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© Codex Fam — Contact</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
