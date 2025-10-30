@@ -17,10 +17,10 @@ function sendToWhatsApp(event) {
   // Grab the form data
   const name = document.querySelector("#name").value.trim();
   const message = document.querySelector("#message").value.trim();
-  const phoneNumber = "254721653602"; // your WhatsApp number
+  const phoneNumber = "+254721653602"; // your WhatsApp number
 
   // Build the WhatsApp link
-  const url = `https://wa.me/${phoneNumber}?text=👋 Hey Codex Fam,%0A%0AI'm *${name}* and here's my message:%0A${message}`;
+  const url = `https://wa.me/${+254721653602}?text=👋 Hey Codex Fam,%0A%0AI'm *${ERIC}* and here's my message:%0A${message}`;
 
   // Open WhatsApp
   window.open(url, "_blank");
