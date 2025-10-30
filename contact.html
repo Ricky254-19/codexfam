@@ -25,25 +25,24 @@
   <main class="container">
     <section class="card">
       <h2>Join Codex Fam</h2>
-      <p>Drop your Discord or social links here — we’ll update soon.</p>
+      <p>Drop your Discord or social links here — we’ll update these soon.</p>
 
-      <form class="contact-form" onsubmit="send to +254721653602(event)">
-  <label>
-    Your name
-    <input type="text" id="name" placeholder="e.g. Wanjiru" required />
-  </label>
-  <label>
-    Message
-    <textarea id="message" placeholder="Tell us why you wanna join..." rows="4" required></textarea>
-  </label>
-  <div class="row">
-    <button class="btn" type="submit">Send</button>
-    <button class="btn ghost" type="reset">Reset</button>
-  </div>
-</form>
+      <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+        <label>
+          Your name
+          <input type="text" id="name" placeholder="e.g. Wanjiru" required />
+        </label>
+        <label>
+          Message
+          <textarea id="message" placeholder="Tell us why you wanna join..." rows="4" required></textarea>
+        </label>
+        <div class="row">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+      </form>
 
-     <p id="thankyou" class="muted"></p>
-
+      <p id="thankyou" class="muted"></p>
     </section>
   </main>
 
