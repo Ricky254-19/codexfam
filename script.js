@@ -5,29 +5,48 @@ document.querySelectorAll("nav a").forEach(link => {
   if (link.getAttribute("href") === currentPage) link.classList.add("active");
 });
 
-// WhatsApp contact function
+// highlight active nav link
+const currentpage = location.pathname.split("/").pop();
+document.querySelectorAll("nav a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) link.classList.add("active");
+});
+
 function sendToWhatsApp(event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const message = document.getElementById("message").value.trim();
-  const phone = "+254721653602"; // your WhatsApp number
+  const thankyou = document.getElementById("thankyou");
 
   if (!name || !message) {
-    alert("Please fill in both fields before sending.");
+    alert("Please fill in all fields before sending.");
     return;
   }
 
-  const text = `Hello Codex Fam 👋%0A%0AI'm *${name}* and here's my message:%0A${message}%0A%0A🔥 Sent from the Codex Fam website`;
-  const url = `https://wa.me/${phone}?text=${text}`;
+  const fullMessage = `Hello Codex Fam! 👾%0A%0A` +
+                      `Name: ${encodeURIComponent(name)}%0A` +
+                      `Message: ${encodeURIComponent(message)}%0A%0A` +
+                      `Sent from the Codex Fam website 🌐`;
 
-  window.open(url, "_blank");
+  const phoneNumber = "254721653602";
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
 
-  const thankyou = document.getElementById("thankyou");
-  thankyou.textContent = "✅ Your message has been prepared in WhatsApp. Thanks for reaching out, gamer!";
-  thankyou.classList.add("show");
+  // Open WhatsApp link
+  window.open(whatsappURL, "_blank");
 
-  document.querySelector(".contact-form").reset();
+  // Clear form
+  document.getElementById("name").value = "";
+  document.getElementById("message").value = "";
 
-  setTimeout(() => thankyou.classList.remove("show"), 5000);
+  // Show glowing thank-you animation
+  thankyou.style.display = "block";
+  thankyou.style.opacity = 1;
+
+  // Hide thank-you after a few seconds
+  setTimeout(() => {
+    thankyou.style.opacity = 0;
+    setTimeout(() => (thankyou.style.display = "none"), 1000);
+  }, 5000);
 }
+
+
