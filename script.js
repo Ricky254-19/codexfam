@@ -1,52 +1,19 @@
-console.log("🔥 Script loaded successfully!");
 // Highlight active nav link
-const currentPage = location.pathname.split("/").pop();
-document.querySelectorAll("nav a").forEach(link => {
-  if (link.getAttribute("href") === currentPage) link.classList.add("active");
-});
-
-// highlight active nav link
-const currentpage = location.pathname.split("/").pop();
-document.querySelectorAll("nav a").forEach(link => {
-  if (link.getAttribute("href") === currentPage) link.classList.add("active");
-});
-
-function sendToWhatsApp(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const thankyou = document.getElementById("thankyou");
-
-  if (!name || !message) {
-    alert("Please fill in all fields before sending.");
-    return;
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll("nav ul li a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
   }
+});
 
-  const fullMessage = `Hello Codex Fam! 👾%0A%0A` +
-                      `Name: ${encodeURIComponent(name)}%0A` +
-                      `Message: ${encodeURIComponent(message)}%0A%0A` +
-                      `Sent from the Codex Fam website 🌐`;
-
-  const phoneNumber = "254721653602";
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
-
-  // Open WhatsApp link
-  window.open(whatsappURL, "_blank");
-
-  // Clear form
-  document.getElementById("name").value = "";
-  document.getElementById("message").value = "";
-
-  // Show glowing thank-you animation
-  thankyou.style.display = "block";
-  thankyou.style.opacity = 1;
-
-  // Hide thank-you after a few seconds
-  setTimeout(() => {
-    thankyou.style.opacity = 0;
-    setTimeout(() => (thankyou.style.display = "none"), 1000);
-  }, 5000);
+// Contact form WhatsApp redirect
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.querySelector("#name").value;
+    const message = document.querySelector("#message").value;
+    const encoded = encodeURIComponent(`Hey Codex Fam! I’m ${name}.\n\n${message}`);
+    window.open(`https://wa.me/254721653602?text=${encoded}`, "_blank");
+  });
 }
-
-

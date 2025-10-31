@@ -1,168 +1,159 @@
-body {
-  background-color: pink;
-  color: neonblue;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
+/* --- Codex Fam Neon Theme --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: rgb(255, 0, 170);
-  color: #000000;
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #000814;
+  color: #e0e0e0;
+  overflow-x: hidden;
 }
 
-/* header & logo */
-header {
+/* --- Navbar --- */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #66dd16;
-  border-bottom: 1px solid #00bfff;
+  padding: 20px 60px;
+  border-bottom: 2px solid #00b4d8;
+  box-shadow: 0 0 20px #00b4d8;
 }
 
-.logo {
+nav .logo {
   font-size: 1.8rem;
-  font-weight: 700;
-  color: #d61515;
-  text-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff;
+  color: #00b4d8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* nav links */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
-nav a {
+nav ul li a {
+  color: #e0e0e0;
   text-decoration: none;
-  color: #000000;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-nav a:hover,
-nav a.active {
-  color: #ff0000;
-  text-shadow: 0 0 10px #00bfff;
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00b4d8;
+  text-shadow: 0 0 10px #00b4d8;
 }
 
-/* hero section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
+/* --- Section Titles --- */
+section {
+  padding: 100px 60px;
+  min-height: 100vh;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #00ff22;
-  text-shadow: 0 0 15px #00bfff;
-  margin-bottom: 20px;
+h1, h2 {
+  color: #00b4d8;
+  text-shadow: 0 0 15px #00b4d8;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  background: #00b4d8;
+  color: #000814;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 20px #00b4d8;
 }
 
-/* footer */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00eaff;
+}
+
+/* --- Contact Form --- */
+form {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #00b4d8;
+  box-shadow: 0 0 20px #00b4d8;
+}
+
+form input, form textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #00b4d8;
+  color: white;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  box-shadow: 0 0 10px #00b4d8;
+}
+
+form button {
+  width: 100%;
+  border: none;
+  background: #00b4d8;
+  color: #000814;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  box-shadow: 0 0 20px #00eaff;
+  transform: translateY(-2px);
+}
+
+/* --- Footer --- */
 footer {
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
-  padding: 30px 10px;
-  border-top: 1px solid #080808;
-  margin-top: auto;
+  padding: 30px;
+  border-top: 2px solid #00b4d8;
+  box-shadow: 0 -2px 20px #00b4d8;
+  color: #a0a0a0;
 }
 
-.social-links a {
-  margin: 0 10px;
-  color: #d0ff00;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  text-shadow: 0 0 10px #d87606;
-}
-.about-section {
-  text-align: center;
-  padding: 100px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-section h1 {
-  font-size: 2.5rem;
-  color: #e28e0f;
-  text-shadow: 0 0 15px #000000;
-  margin-bottom: 30px;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.about-highlight {
-  background: rgba(0, 191, 255, 0.1);
-  border: 1px solid #000000;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 40px;
-  box-shadow: 0 0 20px #fffb0033;
-}
-#thankyou {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-#thankyou.show {
-  opacity: 1;
-}
-/* === Codex Fam Contact Form Glow Up === */
-.thankyou-msg {
-  font-weight: bold;
-  color: rgb(0, 68, 255);
-  text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 40px #0ff;
-  animation: glowPulse 2s infinite alternate;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-@keyframes glowPulse {
-  from {
-    opacity: 0.7;
-    text-shadow: 0 0 5px #00f, 0 0 10px #0ff;
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
   }
-  to {
-    opacity: 1;
-    text-shadow: 0 0 20px #0ff, 0 0 40px #00f, 0 0 80px #0ff;
-  }
-}
 
-/* Responsive contact form layout */
-@media (max-width: 600px) {
-  .contact-form {
-    width: 100%;
-    padding: 1rem;
-    font-size: 0.9rem;
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    width: 100%;
-    margin-bottom: 0.5rem;
+
+  section {
+    padding: 80px 20px;
   }
 }
