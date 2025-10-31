@@ -23,18 +23,36 @@
   </header>
 
   <main class="container">
-    <h2 class="page-title">Highlights & Clips</h2>
+  <h2 class="page-title">Highlights & Clips</h2>
 
-    <section class="gallery-grid">
-      <!-- Placeholder boxes — drop your screenshots here later -->
-      <div class="shot">Add your screenshot.jpg</div>
-      <div class="shot">Add your clip.mp4</div>
-      <div class="shot">Add your screenshot2.jpg</div>
-      <div class="shot">Add your screenshot3.jpg</div>
-    </section>
+  <section class="gallery-grid">
+  <div class="shot">
+    <img src="images/codex1.jpg.jpg" alt="Screenshot 1">
+  </div>
 
-    <p class="muted">Tip: put images in a `media/` folder and update the markup here when ready.</p>
-  </main>
+  <div class="shot">
+    <img src="media/codex2.jpg" alt="Screenshot 2">
+  </div>
+
+  <div class="shot">
+    <img src="media/codex3.jpg" alt="Screenshot 3">
+  </div>
+
+  <div class="shot">
+    <video src="media/clip1.mp4" controls></video>
+  </div>
+</section>
+
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+  <p class="muted">Tip: all images are stored in the <code>images/</code> folder.</p>
+</main>
+
 
   <footer class="site-footer">
     <small>© Codex Fam — Gallery</small>
