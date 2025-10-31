@@ -1,3 +1,4 @@
+console.log("🔥 Script loaded successfully!");
 // Highlight active nav link
 const currentPage = location.pathname.split("/").pop();
 document.querySelectorAll("nav a").forEach(link => {
@@ -10,7 +11,7 @@ function sendToWhatsApp(event) {
 
   const name = document.getElementById("name").value.trim();
   const message = document.getElementById("message").value.trim();
-  const phone = "254721653602"; // your WhatsApp number
+  const phone = "+254721653602"; // your WhatsApp number
 
   if (!name || !message) {
     alert("Please fill in both fields before sending.");
