@@ -11,8 +11,8 @@ body {
 }
 
 body {
-  background: #0659d4;
-  color: #01fd16;
+  background: #ff02ff;
+  color: #000000;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -25,14 +25,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #dd1658;
+  background: #66dd16;
   border-bottom: 1px solid #00bfff;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #00bfff;
+  color: #d61515;
   text-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff;
 }
 
@@ -46,13 +46,13 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #dd2707;
+  color: #000000;
   transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  color: #00bfff;
+  color: #ff0000;
   text-shadow: 0 0 10px #00bfff;
 }
 
@@ -64,7 +64,7 @@ nav a.active {
 
 .hero h1 {
   font-size: 3rem;
-  color: #00bfff;
+  color: #00ff22;
   text-shadow: 0 0 15px #00bfff;
   margin-bottom: 20px;
 }
@@ -78,19 +78,19 @@ nav a.active {
 footer {
   text-align: center;
   padding: 30px 10px;
-  border-top: 1px solid #00bfff;
+  border-top: 1px solid #080808;
   margin-top: auto;
 }
 
 .social-links a {
   margin: 0 10px;
-  color: #00bfff;
+  color: #d0ff00;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .social-links a:hover {
-  text-shadow: 0 0 10px #00bfff;
+  text-shadow: 0 0 10px #d87606;
 }
 .about-section {
   text-align: center;
@@ -101,8 +101,8 @@ footer {
 
 .about-section h1 {
   font-size: 2.5rem;
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #e28e0f;
+  text-shadow: 0 0 15px #000000;
   margin-bottom: 30px;
 }
 
@@ -114,11 +114,11 @@ footer {
 
 .about-highlight {
   background: rgba(0, 191, 255, 0.1);
-  border: 1px solid #00bfff;
+  border: 1px solid #000000;
   padding: 20px;
   border-radius: 12px;
   margin-top: 40px;
-  box-shadow: 0 0 20px #00bfff33;
+  box-shadow: 0 0 20px #fffb0033;
 }
 #thankyou {
   opacity: 0;
@@ -131,7 +131,7 @@ footer {
 /* === Codex Fam Contact Form Glow Up === */
 .thankyou-msg {
   font-weight: bold;
-  color: #0ff;
+  color: rgb(0, 68, 255);
   text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 40px #0ff;
   animation: glowPulse 2s infinite alternate;
   text-align: center;
