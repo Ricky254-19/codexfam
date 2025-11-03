@@ -25,22 +25,27 @@
   <main class="container">
     <section class="card">
       <h2>Join Codex Fam</h2>
-      <p>Drop your social links here — we’ll update these soon. Feel at home🌍😉</p>
+      <p>Drop your social links here — we’ll update these soon. Feel at home🌍+😉</p>
 
-      <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+     <form class="contact-form" onsubmit="sendToWhatsApp(event)">
   <label>
     Your name
     <input type="text" id="name" placeholder="e.g. Wanjiru" required />
   </label>
   <label>
     Phone contact/Social Links
-    <textarea id="Phone Contact" placeholder="e.g. 0712345678/wainjiru@gmail.com" rows="4" required></textarea>
+    <textarea id="contactInfo" placeholder="e.g. 0712345678 / wainjiru@gmail.com" rows="4" required></textarea>
   </label>
   <div class="row">
     <button class="btn" type="submit">Send</button>
     <button class="btn ghost" type="reset">Reset</button>
   </div>
 </form>
+
+<!-- ✅ Only one thank-you message -->
+<p id="thankyou" class="muted thankyou-msg" style="display:none;">
+  ✅ Message Sent Successfully! See you on the grid 💫
+</p>
 
 <!-- Glowing animated thank-you text -->
 <p id="thankyou" class="muted thankyou-msg" style="display:none;">
