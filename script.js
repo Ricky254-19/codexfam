@@ -6,7 +6,37 @@ document.querySelectorAll("nav ul li a").forEach(link => {
   }
 });
 
+function sendToWhatsApp(event) {
+  event.preventDefault(); // stop page reload
+
+  // Get form values
+  let name = document.getElementById("name").value.trim();
+  let contact = document.getElementById("contact").value.trim();
+
+  // Replace with your WhatsApp number (254 = Kenya country code)
+  let phoneNumber = "254721653602"; 
+
+  if (name === "" || contact === "") {
+    alert("Please fill in all fields before sending.");
+    return;
+  }
+
+  // Format message
+  let message = `*New Codex Fam Contact!*%0A
+  👤 Name: ${name}%0A
+  🔗 Contact/Social: ${contact}%0A
+  🚀 Sent via Codex Fam Website`;
+
+  // WhatsApp API link
+  let url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Open WhatsApp chat
+  window.open(url, "`https://wa.me/${phoneNumber}?text=${message}`");
+
+  // Show thank-you message
+  document.querySelector(".thankyou-msg").style.display = "block";
 }
+
 // --- Lightbox for Gallery ---
 const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
@@ -27,22 +57,3 @@ closeBtn.addEventListener('click', () => {
 lightbox.addEventListener('click', e => {
   if (e.target === lightbox) lightbox.style.display = 'none';
 });
-
-function sendToWhatsApp(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const contactInfo = document.getElementById("contactInfo").value;
-
-  const message = `New Codex Fam Contact:\n\n👤 Name: ${name}\n🔗 Contact/Social: ${contactInfo}`;
-  const phoneNumber = "254721653602"; // your WhatsApp number (no +)
-
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-
-  // show thank-you text
-  const thankyou = document.getElementById("thankyou");
-  thankyou.style.display = "block";
-  thankyou.style.color = "#00bfff"; // neon blue vibe
-  thankyou.style.textShadow = "0 0 10px #00bfff";
-}
