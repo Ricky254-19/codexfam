@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="loader">
+    <h1>CODEXFAM INITIALIZING...</h1>
+</div>
   <header>
     <div class="logo">Codex Fam</div>
     <nav>
@@ -58,10 +61,22 @@
       <a href="https://instagram.com/codexfam" target="_blank">Instagram</a>
       <a href="https://steamcommunity.com/id/codexfam" target="_blank">Steam</a>
     </div>
-    <p>© 2025 Codex Fam. All rights reserved.</p>
+    <p>© 2026 Codex Fam. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.8s ease";
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 800);
+    }, 1500);
+});
+</script>
 </body>
 </html>
 
